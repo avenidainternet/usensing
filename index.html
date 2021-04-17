@@ -1,189 +1,1226 @@
 <!DOCTYPE html>
-<html lang="en-US" class="backgroundVideo">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title>usensing 2021</title>
-        
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Lemon' rel='stylesheet' type='text/css'>
-        
-        <link rel="shortcut icon" href="images/favicon.jpg">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>USensing</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/animate.css" />
-        <link rel="stylesheet" type="text/css" href="css/YTPlayer.css" />
-        <link rel="stylesheet" type="text/css" href="css/supersized.css" />
-        <link rel="stylesheet" type="text/css" href="css/styles.css" />
-        
-        
-    </head>
-    <body>
-        
-        <a id="bgndVideo"  data-property="{videoURL:'http://www.youtube.com/watch?v=UNs7TkFvK-4',containment:'body',autoPlay:true, mute:false, startAt:6,opacity:1,ratio:'4/3', addRaster:true}">&nbsp;</a>
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        
-        <div class="video-btns">
-        <a class="btn btn-transparent" onclick="jQuery('#bgndVideo').toggleVolume();"><i class="fa fa-volume-up"></i></a>
-        <a class="btn btn-transparent" onclick="jQuery('#bgndVideo').getPlayer().pauseVideo();"><i class="fa fa-pause"></i></a>
-        <a class="btn btn-transparent" onclick="jQuery('#bgndVideo').getPlayer().playVideo();"><i class="fa fa-play"></i></a>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="css/carrusel.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+  <script>
+    $('#myCarousel').carousel({
+     interval: 3000,
+   })
+ </script>
+
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+
+    <div id="topbar">
+      <div class="container">
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
         </div>
-        
-        <!-- CONTAINER -->
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+      </div>
+    </div>
 
-                    <div class="section clearfix">
-                        <h1 class="logo animated fadeInDown">usensing</h1>
+    <div class="container">
 
-                        <div id="text_slider">
-                            <div class="slide clearfix"><h2>Estamos trabajando en el nuevo sitio web</h2></div>
+      <div class="logo float-left">
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><a href="#intro" class="scrollto"><span>USensing </span></a></h1>
+        <!-- <a href="#header" class="scrollto"><img src="img/logo.png" alt="" class="img-fluid"></a> -->
+      </div>
 
-                            <div class="slide clearfix"><h2>Nos vemos pronto!</h2></div>
-                        </div>
-
-                    </div>
-
-                    <!-- COUNTDOWN -->
-                    <div class="section clearfix animated fadeIn" id="countdown">
-                        <!-- Days -->
-                        <div class="countdown_group">
-                            <span class="countdown_value">{dnn}</span> 
-                            <span class="countdown_help">{dl}</span>
-                        </div>
-
-                        <!-- Hours --> 
-                        <div class="countdown_group">
-                            <span class="countdown_value">{hnn}</span> 
-                            <span class="countdown_help">{hl}</span>
-                        </div> 
-
-                        <!-- Minutes -->
-                        <div class="countdown_group">
-                            <span class="countdown_value">{mnn}</span> 
-                            <span class="countdown_help">{ml}</span> 
-                        </div>
-
-                        <!-- Seconds -->
-                        <div class="countdown_group">
-                            <span class="countdown_value">{snn}</span> 
-                            <span class="countdown_help">{sl}</span>
-                        </div>
-                    </div>
-                    <!-- END COUNTDOWN -->
-<!--
-                    <div class="section clearfix animated fadeIn">
-                        <p>Quiere ser notificado cuando el sitio web esté listo?</p>
-                        <form id="form_newsletter">
-                            <div class="row">
-                                <div class="col-md-6 col-md-offset-3">
-                                    <div class="input-group input-group-lg">
-                                        <input type="email" name="email" class="form-control" placeholder="Ingrese su correo" >
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="submit"><i class="fa fa-check"></i> Notificarme!</button>
-                                        </span>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <div id="form_newsletter_result"></div>
-                                </div>
-                            </div>
-                        </form>
-
-                    </div>
--->
-                    <div class="section clearfix animated fadeIn" id="contact">
-                        <a href="#"><i class="fa fa-envelope-o"></i> contacto@usensing.cl</a>
-                        <a href="#"><i class="fa fa-phone"></i> +56 9 9703 2842</a>
-                    </div>
-
-<!--
-                    <div class="section clearfix">
-                        <a href="#" class="btn btn-transparent btn-facebook"><i class="fa fa-facebook fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-twitter"><i class="fa fa-twitter fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-googleplus"><i class="fa fa-google-plus fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-youtube"><i class="fa fa-youtube fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-pinterest"><i class="fa fa-pinterest fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-instagram"><i class="fa fa-instagram fa-fw"></i></a>
-                        <a href="#" class="btn btn-transparent btn-linkedin"><i class="fa fa-linkedin fa-fw"></i></a>
-                    </div>
--->
-                    <div class="section clearfix">
-                        <a href="#" class="open_aboutus btn btn-transparent animated fadeInUp">Más acerca de nuestra empresa</a>
-                    </div>
+      <nav class="main-nav float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#intro">Inicio</a></li>
+          <li><a href="#about">Quienes Somos</a></li>
+          <li><a href="#services">Tecnología</a></li>
+          <li><a href="#portfolio">Portafolio</a></li>
+          <li><a href="#testimonials">Fundadores</a></li> 
+          <!-- 
+          <li class="drop-down"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="drop-down"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li>
+          -->
+          <li><a href="#footer">Contacto</a></li>
+        </ul>
+      </nav><!-- .main-nav -->
+      
+    </div>
+  </header><!-- #header -->
 
 
+  <!--==========================
+    Intro Section
+  ============================-->
 
-                </div>
-            </div>
-        </div>
-        <!-- END CONTAINER -->
-
-        <!-- FOOTER -->
-        <div id="footer">
-		<p>Diseñado por usensing.cl</p>
-		</div>
-        <!-- END FOOTER -->
+  <main id="main">
 
 
-        <!-- ABOUT US -->
-        <div id="about_us">
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
 
-                <h1>Quenes somos</h1>
-
+      <section id="intro" class="clearfix">
+    
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="mask flex-center">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget fringilla nisl. Nunc vitae tristique risus. 
-                                Nulla placerat tristique quam, et vulputate tellus vehicula et. Suspendisse potenti. 
-                                Nullam massa neque, pretium congue laoreet id, imperdiet vel sem. 
-                                Praesent justo ante, semper vitae molestie vitae, varius at dolor. Phasellus ut nunc vitae nibh faucibus dapibus quis vel erat. 
-                                Aenean condimentum, orci nec tincidunt aliquam, eros erat sollicitudin justo, pretium congue sem nulla at tortor. 
-                                Nulla rhoncus nibh at fermentum interdum. Morbi nulla diam, dignissim a libero in, pharetra imperdiet sapien. 
-                                Suspendisse imperdiet ipsum a pellentesque lacinia. Aenean fermentum sapien libero, sit amet suscipit mi varius non.
-                            </p>
-                            <p>
-                                Sed egestas, dolor non pellentesque ullamcorper, ante odio dapibus erat, et iaculis metus dui at nulla. 
-                                Proin vehicula quis elit eget luctus. Ut vulputate lacus eget elit porttitor porta. 
-                                Etiam eu suscipit velit, sit amet commodo orci. Vestibulum congue ipsum et malesuada ornare. 
-                                Praesent eget leo in risus condimentum gravida nec faucibus neque. Curabitur bibendum tempus sem, et commodo est aliquet in. 
-                                Vivamus porta vehicula est, ac posuere libero semper ac. Phasellus ultrices est eget ultricies sollicitudin. 
-                                Sed dictum quam eu erat gravida, non rhoncus elit aliquet. Vivamus vel eros ac lectus rhoncus pulvinar vel ac ante. 
-                                Vestibulum sem libero, tempus nec neque non, aliquam fermentum libero. 
-                                Phasellus lorem mi, congue porta consequat in, mollis eu quam.
-                            </p>
-                            <p>
-                                Nunc eu scelerisque risus, sit amet volutpat tortor. Maecenas sit amet eleifend nisl. 
-                                Praesent porttitor velit a eros laoreet viverra. Nam ac sapien et enim auctor auctor. 
-                                Phasellus nibh nisl, porta eu erat ullamcorper, aliquet dignissim nulla. 
-                                Proin ac magna vel lectus congue eleifend. Mauris vel tincidunt leo. Vivamus elementum in massa et euismod.
-                            </p>
-                        </div>
+                  <div class="row align-items-center">
+                    <div class="col-md-7 col-12 order-md-1 order-2">
+                      <h4 class="p-5">Soluciones  <br>
+                        para la minería</h4>
+                      <p class="p-5">Tecnología desarrollada en la Universidad de Santiago cuenta con patentes en varios países.</p>
+                      
                     </div>
+                    <div class="col-md-5 col-12 order-md-2 order-1"><img src="img/p14.png" class="mx-auto" alt="slide"></div>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="mask flex-center">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-7 col-12 order-md-1 order-2">
+                      <h4 class="p-5">Soluciones  <br>
+                        para la minería</h4>
+                      <p class="p-5">Tecnología desarrollada por la universidad de Universidad de Santiago de Chile, Licenciada exclusivamente a Usensing.</p>
+                    </div>
+                    <div class="col-md-5 col-12 order-md-2 order-1"><img src="img/p11.png" class="mx-auto" alt="slide"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="mask flex-center">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-7 col-12 order-md-1 order-2">
+                      <h4 class="p-5">Soluciones  <br>
+                        para la minería</h4>
+                      <p class="p-5">Tecnología desarrollada por la universidad de Universidad de Santiago de Chile, Licenciada exclusivamente a Usensing.</p>
+                    </div>
+                    <div class="col-md-5 col-12 order-md-2 order-1"><img src="img/p12.png" class="mx-auto" alt="slide"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="mask flex-center">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-md-7 col-12 order-md-1 order-2">
+                      <h4 class="p-5">Soluciones <br>
+                        para la minería</h4>
+                      <p class="p-5">Tecnología desarrollada por la universidad de Universidad de Santiago de Chile, Licenciada exclusivamente a Usensing.</p>
+                    </div>
+                    <div class="col-md-5 col-12 order-md-2 order-1"><img src="img/p13.png" class="mx-auto" alt="slide"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+        <!--slide end--> 
+        
+    
+      </section>
 
-                <a href="#" class="close_aboutus btn btn-default"><i class="fa fa-times-circle"></i> Close</a>
+
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img">
+              <img src="img/logoXL.png" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content">
+              <h2>Quienes Somos</h2>
+              <h3>USensing, empresa de base científica y tecnológica.</h3>
+              <p>
+                USensing, empresa de base científica tecnológica, creada por académicos del Departamento de Metalurgia 
+                de la Universidad de Santiago, permite controlar los procesos de flotación de la industria minera por 
+                medio de sensores sumergibles. Que proporcionan información en tiempo real sobre las variables hidrodinámicas 
+                en la zona de colección de una máquina de flotación.
+              </p>
+              <p>
+                Esta empresa creada como un spinoff de la Universidad de Santiago de Chile, cuenta con los permisos para 
+                desarrollar y comercializar tecnologías desarrolladas por la institución universitaria.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- #about -->
+
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services" class="section-bg">
+      <div class="container">
+
+          <header class="section-header">
+            <h3>Tecnología</h3>
+          </header>     
+          <p>
+            La tecnología consiste de un dispositivo sensor sumergible multivariable que permite medir simultáneamente y en tiempo real:
+          </p>
+          <ul>
+            <li style="list-style:none"><i class="ion-android-checkmark-circle"></i> Concentración de aire en forma de burbujas.</li>
+            <li style="list-style:none"><i class="ion-android-checkmark-circle"></i> Concentración de sólidos en la suspensión.</li>
+          </ul>
+          <h5><b>Principio de Funcionamiento</b></h5>
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-lg-8 wow bounceInUp" data-wow-duration="1.4s">
+              <p class="text-justify">
+                Al sumergir verticalmente el dispositivo sensor en la zona de colección de una máquina de flotación, 
+                genera las condiciones necesarias para ir induciendo un flujo continuo descendente de pulpa desaireada 
+                a partir de una pulpa aireada que se encuentra rodeando al sensor, esta condición se debe a una celda 
+                de exclusión de gas la que no permite el arrastre de burbujas a través del área superior del dispositivo 
+                generando así una constante y creciente diferencia de densidad aparente entre el fluido interno y externo 
+                del sensor; este flujo que sale por la parte inferior del dispositivo disminuye aun más la probabilidad 
+                de ingreso de burbujas por la parte inferior del aparato tecnológico. Este flujo llegará a su estado 
+                estacionario en el momento cuando no existan burbujas al interior del dispositivo, momento en el cual 
+                se obtendrá una medición robusta de la concentración de gas y solido, dicho flujo continuo descendiente 
+                de pulpa sin aire tendrá una magnitud la cual es en función y proporcionalidad a la concentración de aire 
+                en la región que abarca y se encuentra inmerso el sensor. En las imágenes a continuación se evidencia la 
+                secuencia de este proceso de exclusión de burbujas y la generación de un flujo de pulpa des-aireado a través 
+                del sensor. El grosor de las líneas de flujo ilustradas por medio de flechas es proporcional a la magnitud 
+                del flujo.
+              </p>
+            </div>
+            <div class="col-xs-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+              <img src="img/burbujas.gif" class="text-center">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <img src="img/a.png">
+                <h4 class="title">(a)</h4>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <img src="img/b.png">
+                <h4 class="title">(b)</h4>
+              </div>
+            </div>
+  
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+              <div class="box">
+                <img src="img/c.png">
+                <h4 class="title">(c)</h4>
+              </div>
+            </div>
+
+          </div>
+            
+          <p class="text-center">Exclusión gradual de burbujas por medio de flujo continuo descendiente a través del sensor. </p>
+
+          <p class="text-justify">
+            Una vez que se ha establecido el equilibrio del proceso de exclusión de burbujas, la concentración 
+            de aire al exterior del dispositivo sensor sumergido se puede obtener mediante un balance de energía 
+            a la pulpa que fluye entre el extremo superior e inferior del censo.
+          </p>
+
+          <h5><b>Patentes</b></h5>
+      
+          <p class="text-justify">
+            Esta tecnología desarrollada en la Universidad de Santiago cuenta con patentes en varios países, el 
+            licenciamiento de estas patentes es de exclusividad de USensing, al ser un spin off de la USACH          
+          </p>
+
+          <div class="row">
+
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon" style="background: #fceef3;"><i class="ion-ios-analytics-outline" style="color: #ff689b;"></i></div>
+                <h4 class="title">Concentración de Aire</h4>
+                <p class="description">
+                  <dl>
+                    <dd>Chile (201503017)</li>
+                    <dd>Perú (1937-2016/DIN)</li>
+                    <dd>Brasil (BR1020160235120)</li>
+                    <dd>USA (15/287,667)</li>
+                    <dd>Canadá (2,944,739)</li>
+                    <dd>Australia (2016238965)</li>
+                    <dd>Sud-África (2016/06889)</li>
+                  </dl>
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 wow bounceInUp" data-wow-duration="1.4s">
+              <div class="box">
+                <div class="icon" style="background: #fff0da;"><i class="ion-ios-bookmarks-outline" style="color: #e98e06;"></i></div>
+                <h4 class="title">Densidad de pulpa y/o concentración de sólidos</h4>
+                <p class="description">
+                  <dl>
+                    <dd>Chile (201503756)</li>
+                    <dd>Perú (001226-2018/DIN)</li>
+                    <dd>USA (16/067,531)</li>
+                    <dd>Canadá (3,015,574)</li>
+                    <dd>Australia (2016379971)</li>
+                    <br>
+                    <br>
+                    <br>
+                  </dl>
+                </p>
+              </div>
+            </div>
+  
+          </div>
+
+          <p class="text-justify">
+            Como resultado de estos sensores es posible monitorear en línea y en tiempo real el comportamiento de 
+            una celda o columna de flotación de minerales, tal como se muestra en la imagen          
+          </p>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Why Us Section
+    ============================-->
+    <!--
+    <section id="why-us" class="wow fadeIn">
+      <div class="container-fluid">
+        
+        <header class="section-header">
+          <h3>Why choose us?</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="why-us-img">
+              <img src="img/why-us.jpg" alt="" class="img-fluid">
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="why-us-content">
+              <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum exercitationem est error omnis repudiandae ad dolorum sit.</p>
+              <p>
+                Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis deleniti porro consequatur
+                et temporibus. Labore est odio.
+
+                Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil repellat..
+              </p>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-diamond" style="color: #f058dc;"></i>
+                <h4>Corporis dolorem</h4>
+                <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et ipsum. Soluta at enim modi ut incidunt dolor et.</p>
+              </div>
+
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-object-group" style="color: #ffb774;"></i>
+                <h4>Eum ut aspernatur</h4>
+                <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati. Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla aut.</p>
+              </div>
+              
+              <div class="features wow bounceInUp clearfix">
+                <i class="fa fa-language" style="color: #589af1;"></i>
+                <h4>Voluptates dolores</h4>
+                <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam dolores ut enim ullam voluptas distinctio aut.</p>
+              </div>
+              
+            </div>
+
+          </div>
 
         </div>
-        <!-- END ABOUT US -->
-        
-		<!-- JS -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/jquery.plugin.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.countdown.min.js"></script>
-        <script src="js/supersized.min.js"></script>
-        <script src="js/jquery.cycle.min.js"></script>
-        <script src="js/jquery.mb.YTPlayer.js"></script>
-        <script src="js/scripts.js"></script>
-        
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
-    </body>
+
+      </div>
+    -->
+<!--
+      <div class="container">
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">18</span>
+            <p>Hard Workers</p>
+          </div>
+  
+        </div>
+-->
+      </div>
+    </section>
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <!--
+    <section id="call-to-action" class="wow fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Call To Action</h3>
+            <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    -->
+    <!-- #call-to-action -->
+
+    <!--==========================
+      Features Section
+    ============================-->
+    <!--
+    <section id="features">
+      <div class="container">
+
+        <div class="row feature-item">
+          <div class="col-lg-6 wow fadeInUp">
+            <img src="img/features-1.svg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 wow fadeInUp pt-5 pt-lg-0">
+            <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+            <p>
+              Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+            </p>
+            <p>
+              Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+            </p>
+          </div>
+        </div>
+
+        <div class="row feature-item mt-5 pt-5">
+          <div class="col-lg-6 wow fadeInUp order-1 order-lg-2">
+            <img src="img/features-2.svg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
+            <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+            <p>
+             Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt. 
+            </p>
+            <p>
+              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+            </p>
+            <p>
+              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+    -->
+    <!-- #about -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio" class="section-bg">
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Nuestro Portafolio</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Todo</li>
+              <li data-filter=".filter-mul">Sensor Multivariable</li>
+              <li data-filter=".filter-sur">Estimación Surfactante</li>
+              <li data-filter=".filter-equ">Equipos Complementarios</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <!-- Sensor Multivariable -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable1.jpg" data-lightbox="portfolio" data-title="Sensor Multivariable" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Mas Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sensor Multivariable" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sensor Multivariable" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable4.jpg" data-lightbox="portfolio" data-title="Sensor Multivariable" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Mas Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable5.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sensor Multivariable" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-mul" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Multivariable6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Sensor Multivariable</a></h4>
+                <p>Sensor Multivariable</p>
+                <div>
+                  <a href="img/portfolio/Multivariable6.jpg" class="link-preview" data-lightbox="portfolio" data-title="Sensor Multivariable" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Sensor Multivariable -->
+
+          <!-- Sensor Sur  -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sur">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Surfactante1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Estimación Surfactante</a></h4>
+                <p>Estimación Surfactante</p>
+                <div>
+                  <a href="img/portfolio/Surfactante1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Estimación Surfactante" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sur">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Surfactante2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Estimación Surfactante</a></h4>
+                <p>Estimación Surfactante</p>
+                <div>
+                  <a href="img/portfolio/Surfactante2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Estimación Surfactante" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-sur" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/Surfactante3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Estimación Surfactante</a></h4>
+                <p>Estimación Surfactante</p>
+                <div>
+                  <a href="img/portfolio/Surfactante3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Estimación Surfactante" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sensor Sur  -->
+
+          <!-- Complementarios  -->
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-equ" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/MedicionesHidrodinamica1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Equipos Complementarios</a></h4>
+                <p>Equipos Complementarios</p>
+                <div>
+                  <a href="img/portfolio/MedicionesHidrodinamica1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Equipos Complementarios" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-equ" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/MedicionesHidrodinamica2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Equipos Complementarios</a></h4>
+                <p>Equipos Complementarios</p>
+                <div>
+                  <a href="img/portfolio/MedicionesHidrodinamica2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Equipos Complementarios" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-equ" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/MedicionesHidrodinamica3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Equipos Complementarios</a></h4>
+                <p>Equipos Complementarios</p>
+                <div>
+                  <a href="img/portfolio/MedicionesHidrodinamica3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Equipos Complementarios" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-equ" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/MedicionesHidrodinamica4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Equipos Complementarios</a></h4>
+                <p>Equipos Complementarios</p>
+                <div>
+                  <a href="img/portfolio/MedicionesHidrodinamica4.jpg" class="link-preview" data-lightbox="portfolio" data-title="Equipos Complementarios" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-equ" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <img src="img/portfolio/MedicionesHidrodinamica5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4><a href="#">Equipos Complementarios</a></h4>
+                <p>Equipos Complementarios</p>
+                <div>
+                  <a href="img/portfolio/MedicionesHidrodinamica5.jpg" class="link-preview" data-lightbox="portfolio" data-title="Equipos Complementarios" title="Preview"><i class="ion ion-eye"></i></a>
+                  <a href="#" class="link-details" title="Más Detalle"><i class="ion ion-android-open"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Complementarios  -->
+ 
+        </div>
+
+      </div>
+    </section>
+    <!-- #portfolio -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+
+    <section id="testimonials">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Fundadores</h3>
+        </header>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+
+            <div class="owl-carousel testimonials-carousel wow fadeInUp">
+    
+              <div class="testimonial-item">
+                <img src="img/miguelmaldonado.png" class="testimonial-img" alt="">
+                <h3>Miguel Maldonado Saavedra</h3>
+                <h4>Ingeniero Civil Electrónico</h4>
+                <p>
+                  Doctor of Philosophy (Ph.D), Electrical Engineering. <br>
+                  Université Laval. Quebec City, Canada<br>
+                  Postdoctoral Fellow (Mineral Processing)<br>
+                  Department of Mining and Materials Engineering.<br>
+                  McGill University, Montreal, Canada
+                </p>
+                <p>
+                  Ingeniero Civil Electrónico/ MSc. Ing. Eléctrica <br>
+                  Universidad de Concepción, Chile
+                </p>
+              </div>
+    
+              <div class="testimonial-item">
+                <img src="img/aaa.png" class="testimonial-img" alt="">
+                <h3>Alfredo Artigas Abuin</h3>
+                <h4>Ingeniero Civil en Metalurgia</h4>
+                <p>
+                  Doctor en Ciencias de la Ingeniería, Mención Ciencia e ingeniería de Materiales<br>
+                  Departamento de Ingeniería Metalúrgica<br>
+                  Universidad de Santiago de Chile<br>
+                  Director Laboratorio SIMET USACH
+                </p>
+                <p>
+                  Ingeniero Civil en Metalurgia<br>
+                  Universidad de Santiago de Chile
+                </p>
+              </div>
+    
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- #testimonials -->
+
+    <!--==========================
+      Team Section
+    ============================-->
+    <!--
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3>Team</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp">
+            <div class="member">
+              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Walter White</h4>
+                  <span>Chief Executive Officer</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="member">
+              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sarah Jhonson</h4>
+                  <span>Product Manager</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="member">
+              <img src="img/team-3.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>William Anderson</h4>
+                  <span>CTO</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Amanda Jepson</h4>
+                  <span>Accountant</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-google-plus"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    -->
+    <!-- #team -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <!--
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Our Clients</h3>
+        </header>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>
+    -->
+    <!-- #clients -->
+
+
+    <!--==========================
+      Pricing Section
+    ============================-->
+    <!--
+
+    <section id="pricing" class="wow fadeInUp section-bg">
+
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Pricing</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+      
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Basic Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Regular Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+          <div class="col-xs-12 col-lg-4">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title"> 
+                  Premium Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+
+    </section>
+  -->
+  <!-- #pricing -->
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <!--
+
+    <section id="faq">
+      <div class="container">
+        <header class="section-header">
+          <h3>Frequently Asked Questions</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+    -->
+    <!-- #faq -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer" class="section-bg">
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+
+                <div class="col-sm-6">
+
+                  <div class="footer-info">
+                    <h3>USening</h3>
+                    <p>
+                      Empresa de base científica y tecnológica, creada por académicos del Departamento de Metalurgia de la Facultad de Ingeniería de la Universidad de Santiago, permite controlar los procesos de flotación de la industria minera por medio de sensores que se sumergen y proporcionan información, en tiempo real, sobre las condiciones hidrodinámicas debajo de la espuma producida por las máquinas de flotación
+                    </p>
+                  </div>
+                  <!--
+                  <div class="footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem.</p>
+                    <form action="" method="post">
+                      <input type="email" name="email"><input type="submit"  value="Subscribe">
+                    </form>
+                  </div>
+                  -->
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="footer-links">
+                    <h4>Links</h4>
+                    <ul>
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="#about">Quienes Somos</a></li>
+                      <li><a href="#services">Tecnología</a></li>
+                      <li><a href="#portfolio">Portafolio</a></li>
+                      <li><a href="#testimonials">Fundadores</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="footer-links">
+                    <h4>Contacto</h4>
+                    <p>
+                      Av. Guanaco 1501, <br>
+                      Huechuraba<br>
+                      Chile <br>
+                      <strong>Celular:</strong> +569 9703 2842<br>
+                      <strong>Email:</strong> alfredo.artigas@usensing.cl<br>
+                    </p>
+                  </div>
+
+                  <div class="social-links">
+                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  </div>
+
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="form">
+              
+              <h4>Contactate con nosotros {{keysitio}} </h4>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Su Nombre" data-rule="minlen:4" data-msg="Por favor ingrese su nombre" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Su Email" data-rule="email" data-msg="Ingrese un correo valido" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Asunto" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Ingrese Mensaje" placeholder="Mensaje"></textarea>
+                  <div class="validation"></div>
+                </div>
+
+                <div id="sendmessage">Su mensaje ha sido enviado. Gracias!</div>
+                <div id="errormessage"></div>
+
+                <div class="text-center"><button type="submit" title="Enviar Mensaje">Enviar Mensaje</button></div>
+              </form>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>USensing</strong>. Todos los derechos reservados
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Rapid
+        -->
+        Diseñado por USensing</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="js/angular.min.js"></script>
+  <script src="js/usensing.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/mobile-nav/mobile-nav.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
 </html>
